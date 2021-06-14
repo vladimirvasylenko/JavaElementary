@@ -6,7 +6,7 @@ public class Main {
         Animal animal = new Animal();
         animal.voice();
 
-        Animal cat = new Cat();
+        Animal cat = new Animal();
         cat.voice();
     }
     // полиморфизм это - один интерфейс и множество реализаций

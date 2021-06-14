@@ -1,6 +1,6 @@
 package com.hillel.lesson1.classwork;
 
-public class Cat extends com.company.lesson1.classwork.intr.AbstractAnimal implements AnimalInterface {
+public class Cat extends AbstractAnimal implements AnimalInterface {
 
     @Override
     public void voice() {
