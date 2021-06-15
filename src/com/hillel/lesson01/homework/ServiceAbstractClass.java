@@ -26,9 +26,4 @@ public abstract class ServiceAbstractClass implements Service {
         System.out.println("male isn't found");
         return false;
     }
-
-    @Override
-    public void writeUser(Master user) throws IOException {
-
-    }
 }
