@@ -1,8 +1,4 @@
-package com.hillel.lesson1.homework;
-
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.util.Scanner;
+package com.hillel.lesson01.homework;
 
 public class User extends Master {
 

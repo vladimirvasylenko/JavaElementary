@@ -1,4 +1,4 @@
-package com.hillel.lesson1.homework;
+package com.hillel.lesson01.homework;
 
 public class Admin extends Master {
 

@@ -1,4 +1,4 @@
-package com.hillel.lesson1.classwork;
+package com.hillel.lesson01.classwork;
 
 public abstract class AbstractAnimal implements AnimalInterface {
     @Override

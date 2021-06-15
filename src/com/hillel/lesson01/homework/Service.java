@@ -1,6 +1,5 @@
-package com.hillel.lesson1.homework;
+package com.hillel.lesson01.homework;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public interface Service {

@@ -1,6 +1,6 @@
-package com.hillel.lesson1.homework;
+package com.hillel.lesson01.homework;
 
-public abstract class Master {
+public class Master {
     private String name;
     private String surname;
     private int age;

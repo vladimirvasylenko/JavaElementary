@@ -1,15 +1,15 @@
-package com.hillel.lesson1.homework;
+package com.hillel.lesson01.homework;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
+public abstract class ServiceAbstractClass implements Service {
 
-public class AdminService implements Service {
-
-    static String file = "C:\\Users\\vasyl\\IdeaProjects\\JavaElementary\\src\\com\\hillel\\lesson1\\homework\\Data.txt";
+    private String file = "/Users/awsome/IdeaProjects/JavaElementary/src/resources/Data.txt";
 
     @Override
     public boolean checkUser(Master user) throws IOException {
-
         FileReader fileReader = new FileReader(file);
         BufferedReader bufferedReader = new BufferedReader(fileReader);
 
@@ -30,16 +30,5 @@ public class AdminService implements Service {
     @Override
     public void writeUser(Master user) throws IOException {
 
-        FileWriter fileWriter = new FileWriter(file, true);
-        fileWriter.write(user.getName() + "\n");
-        fileWriter.write(user.getSurname() + "\n");
-        fileWriter.write(user.getAge() + "\n");
-        fileWriter.write(user.getMail() + "\n");
-        fileWriter.write(user.getPassword() + "\n");
-        fileWriter.write(user.getRole() + "\n");
-
-        fileWriter.close();
-
-        System.out.println("data is writing");
     }
 }

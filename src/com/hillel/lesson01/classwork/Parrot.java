@@ -1,4 +1,4 @@
-package com.hillel.lesson1.classwork;
+package com.hillel.lesson01.classwork;
 
 public class Parrot implements AnimalInterface{
     @Override
