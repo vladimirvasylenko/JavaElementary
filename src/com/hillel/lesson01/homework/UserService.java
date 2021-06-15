@@ -4,12 +4,6 @@ import java.io.IOException;
 
 public class UserService extends ServiceAbstractClass {
 
-    private String file = "/Users/awsome/IdeaProjects/JavaElementary/src/resources/Data.txt";
-
-    public UserService(String file) {
-        this.file = file;
-    }
-
     @Override
     public boolean checkUser(Master user) throws IOException {
         return super.checkUser(user);

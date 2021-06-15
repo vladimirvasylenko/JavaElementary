@@ -5,12 +5,6 @@ import java.io.*;
 
 public class AdminService extends ServiceAbstractClass {
 
-    private String file = "/Users/awsome/IdeaProjects/JavaElementary/src/resources/Data.txt";
-
-    public AdminService(String file) {
-        this.file = file;
-    }
-
     @Override
     public boolean checkUser(Master user) throws IOException {
         return super.checkUser(user);
@@ -18,6 +12,7 @@ public class AdminService extends ServiceAbstractClass {
 
     @Override
     public void writeUser(Master user) throws IOException {
+
         FileWriter fileWriter = new FileWriter(file, true);
         fileWriter.write(user.getName() + "\n");
         fileWriter.write(user.getSurname() + "\n");

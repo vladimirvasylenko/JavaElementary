@@ -9,8 +9,8 @@ public class Main {
         User user = new User("Vladimir", "Vasylenko", 26, "vasylenko@mail.ua", "321", "u");
         Admin admin = new Admin("Andrey", "Yashin", 20, "yashin@mail.ua", "123", "a");
 
-        UserService userService = new UserService("/Users/awsome/IdeaProjects/JavaElementary/src/resources/Data.txt");
-        AdminService adminService = new AdminService("/Users/awsome/IdeaProjects/JavaElementary/src/resources/Data.txt");
+        UserService userService = new UserService();
+        AdminService adminService = new AdminService();
 
         userService.writeUser(user);
         adminService.writeUser(user);

@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public abstract class ServiceAbstractClass implements Service {
 
-    private String file = "/Users/awsome/IdeaProjects/JavaElementary/src/resources/Data.txt";
+    static String file = "/Users/awsome/IdeaProjects/JavaElementary/src/resourses/Data.txt";
 
     @Override
     public boolean checkUser(Master user) throws IOException {
