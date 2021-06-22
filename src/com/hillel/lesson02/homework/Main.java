@@ -8,7 +8,9 @@ public class Main {
 
     private static Information addMoreData(List<Number> primitiveList, Information information){
 
-        Iterator iterator = primitiveList.iterator();
+        Iterator<Number> iterator = primitiveList.iterator();
+        Iterator<String> informationMapIterator = information.getInformationMap().keySet().iterator();
+
 
         while (iterator.hasNext()){
 
@@ -19,6 +21,11 @@ public class Main {
             information.getMailSet().add(mail);
             information.getInformationMap().put(mail, name);
 
+            while (informationMapIterator.hasNext()){
+                if (informationMapIterator.next() == mail){
+
+                }
+            }
 
 
         }
@@ -26,8 +33,6 @@ public class Main {
 
         return information;
     }
-
-
 
     public static void main(String[] args) {
 
