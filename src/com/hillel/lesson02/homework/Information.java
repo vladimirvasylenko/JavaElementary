@@ -40,4 +40,5 @@ public class Information {
                 ", informationMap=" + informationMap +
                 '}';
     }
+
 }

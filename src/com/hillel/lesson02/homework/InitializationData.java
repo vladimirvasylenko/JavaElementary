@@ -1,9 +1,6 @@
 package com.hillel.lesson02.homework;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class InitializationData {
 
@@ -12,7 +9,7 @@ public class InitializationData {
         Information information = new Information();
 
 
-        for (int i = 1; i < 31; i++) {
+        for (int i = 0; i < 30; i++) {
 
             String name = "name" + i;
             information.getNameList().add(name);
@@ -23,7 +20,7 @@ public class InitializationData {
             information.getInformationMap().put(mail, name);
         }
 
-        for (int i = 1; i < 11; i++) {
+        for (int i = 0; i < 10; i++) {
 
             String testName = "testName";
             information.getNameList().add(testName);
@@ -34,29 +31,24 @@ public class InitializationData {
             information.getInformationMap().put(testMail, testName);
         }
 
-        if (deDuplicate(information) == true) {
+        if (deduplicate(information)) {
             System.out.println("the size of collection is same");
             return information;
         }
         System.out.println("the size of collection isn't same");
         return information;
-
     }
 
-    private boolean deDuplicate(Information information) {
+    private boolean deduplicate(Information information) {
 
-        System.out.println(information.getNameList().size());
+        List<String> deduplicateNameList = new ArrayList<>(new HashSet<>(information.getNameList()));
 
-        List<String> deDuplicateNameList = new ArrayList<>(new HashSet<>(information.getNameList()));
-
-        System.out.println(deDuplicateNameList.size());
-
-
-        if (deDuplicateNameList.equals(information.getMailSet()) && information.getMailSet().equals(information.getInformationMap())) {
+        if (deduplicateNameList.size() == information.getMailSet().size()) {
             return true;
-        } return false;
-
-
+        }
+        return false;
     }
+
+
 
 }
