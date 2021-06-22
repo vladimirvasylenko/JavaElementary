@@ -17,7 +17,7 @@ public class Main {
 
             information.getNameList().add(name);
             information.getMailSet().add(mail);
-//            information.getInformationMap(mail, name);
+            information.getInformationMap().put(mail, name);
 
 
 
