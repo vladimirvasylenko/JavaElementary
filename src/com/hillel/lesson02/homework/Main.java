@@ -32,6 +32,7 @@ public class Main {
         myList.add(3.5d);
         myList.add(3.5d);
 
-        addMoreData(myList, initializationData.initializationData());
+        Information information = addMoreData(myList, initializationData.initializationData());
+        System.out.println(information);
     }
 }

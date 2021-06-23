@@ -24,7 +24,7 @@ public class InitializationData {
             String testName = "testName";
             information.getNameList().add(testName);
 
-            String testMail = "testMail";
+            String testMail = testName + "@testMail";
             information.getMailSet().add(testMail);
 
             information.getInformationMap().put(testMail, testName);
@@ -40,12 +40,15 @@ public class InitializationData {
 
     private boolean deduplicate(Information information) {
 
-        List<String> deduplicateNameList = new ArrayList<>(new HashSet<>(information.getNameList()));
+        if (information.getNameList().size() != information.getMailSet().size()) {
 
-        if (deduplicateNameList.size() == information.getMailSet().size()) {
+            List<String> deduplicateNameList = new ArrayList<>(new HashSet<>(information.getNameList()));
+            information.getNameList().removeAll(information.getNameList());
+            information.getNameList().addAll(deduplicateNameList);
+
             return true;
-        }
-        return false;
+        } else
+            return false;
     }
 
 }
