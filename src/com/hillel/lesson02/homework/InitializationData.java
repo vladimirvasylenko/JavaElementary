@@ -8,7 +8,6 @@ public class InitializationData {
 
         Information information = new Information();
 
-
         for (int i = 0; i < 30; i++) {
 
             String name = "name" + i;
