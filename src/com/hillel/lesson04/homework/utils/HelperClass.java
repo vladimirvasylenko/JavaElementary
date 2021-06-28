@@ -1,22 +1,29 @@
 package com.hillel.lesson04.homework.utils;
 
-import com.hillel.lesson04.homework.entities.Client;
+import com.hillel.lesson04.homework.exeptions.UserExpectedError;
 import com.hillel.lesson04.homework.exeptions.WrongFieldException;
 import com.hillel.lesson04.homework.exeptions.WrongSumException;
 
 public class HelperClass {
 
-    public void clientIdentifierChecker(Client client) throws WrongFieldException {
+    public void clientIdChecker(String clientId) throws WrongFieldException {
 
-
+        if (clientId.length() != 10) {
+            throw new WrongFieldException();
+        }
     }
 
-    public void sumChecker(Client client) throws WrongSumException{
+    public void sumChecker(Double sum) throws WrongSumException {
 
-        try{
-            if (client.getSum() == 10000){
+        if (sum != 1000.00) {
+            throw new WrongSumException();
+        }
+    }
 
-            }
-        } catch () throw WrongSumException;
+    public void transactionUserChecker(String senderId, String receiverId) throws UserExpectedError {
+
+        if (senderId.equals(receiverId)) {
+            throw new UserExpectedError();
+        }
     }
 }

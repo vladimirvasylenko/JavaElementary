@@ -2,24 +2,24 @@ package com.hillel.lesson04.homework.entities;
 
 public class Client {
 
-    private String clientIdentifier;
+    private String clientId;
     private String surname;
-    private String accountIdentifier;
-    private float sum;
+    private String accountId;
+    private double sum;
 
-    public Client(String clientIdentifier, String surname, String accountIdentifier, float sum) {
-        this.clientIdentifier = clientIdentifier;
+    public Client(String clientId, String surname, String accountId, double sum) {
+        this.clientId = clientId;
         this.surname = surname;
-        this.accountIdentifier = accountIdentifier;
+        this.accountId = accountId;
         this.sum = sum;
     }
 
-    public String getClientIdentifier() {
-        return clientIdentifier;
+    public String getClientId() {
+        return clientId;
     }
 
-    public void setClientIdentifier(String clientIdentifier) {
-        this.clientIdentifier = clientIdentifier;
+    public void setClientId(String clientId) {
+        this.clientId = clientId;
     }
 
     public String getSurname() {
@@ -30,28 +30,28 @@ public class Client {
         this.surname = surname;
     }
 
-    public String getAccountIdentifier() {
-        return accountIdentifier;
+    public String getAccountId() {
+        return accountId;
     }
 
-    public void setAccountIdentifier(String accountIdentifier) {
-        this.accountIdentifier = accountIdentifier;
+    public void setAccountId(String accountId) {
+        this.accountId = accountId;
     }
 
-    public float getSum() {
+    public double getSum() {
         return sum;
     }
 
-    public void setSum(float sum) {
+    public void setSum(double sum) {
         this.sum = sum;
     }
 
     @Override
     public String toString() {
-        return "Clients{" +
-                "clientIdentifier='" + clientIdentifier + '\'' +
+        return "Client{" +
+                "clientId='" + clientId + '\'' +
                 ", surname='" + surname + '\'' +
-                ", accountIdentifier='" + accountIdentifier + '\'' +
+                ", accountId='" + accountId + '\'' +
                 ", sum=" + sum +
                 '}';
     }
