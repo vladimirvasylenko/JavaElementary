@@ -1,7 +1,6 @@
 package com.hillel.lesson04.homework;
 
 import com.hillel.lesson04.homework.entities.Client;
-import com.hillel.lesson04.homework.exeptions.UserExpectedError;
 import com.hillel.lesson04.homework.exeptions.WrongFieldException;
 import com.hillel.lesson04.homework.exeptions.WrongSumException;
 import com.hillel.lesson04.homework.services.TransactionService;
