@@ -15,7 +15,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         HelperClass helperClass = new HelperClass();
         TransactionService transactionService = new TransactionService();
-        Client senderClient = new Client("0","vasylenko","0",0);
+        Client senderClient = new Client();
 
         System.out.println("Please - enter sender Account ID: ");
         String senderClientId = scanner.nextLine();
@@ -25,13 +25,12 @@ public class Main {
                 helperClass.clientIdChecker(senderClientId);
 
             } catch (WrongFieldException e) {
-//                e.printStackTrace();
                 System.out.println("Incorrect Account ID");
                 System.out.println("Please, write it again");
                 senderClientId = scanner.nextLine();
             }
         }
-        senderClient.setClientId(senderClientId);
+        senderClient.setAccountId(senderClientId);
 
         System.out.println("Please - enter receiver Account ID: ");
         String receiverClientId = scanner.nextLine();
@@ -41,7 +40,6 @@ public class Main {
                 helperClass.clientIdChecker(receiverClientId);
 
             } catch (WrongFieldException e) {
-//                e.printStackTrace();
                 System.out.println("Incorrect Account ID");
                 System.out.println("Please, write it again");
                 receiverClientId = scanner.nextLine();
@@ -51,18 +49,18 @@ public class Main {
         System.out.println("Please - enter sum of transaction: ");
         double sum = scanner.nextDouble();
 
-        while (sum > 1000d){
+        while (sum > 1000d) {
             try {
                 helperClass.sumChecker(sum);
             } catch (WrongSumException e) {
-//                e.printStackTrace();
                 System.out.println("Incorrect sum");
                 System.out.println("Please, write it again");
                 sum = scanner.nextDouble();
             }
         }
 
-        transactionService.moneySend(senderClient,receiverClientId);
+        scanner.close();
+        transactionService.moneySend(senderClient, receiverClientId);
         System.out.println("Money already sent");
 
     }

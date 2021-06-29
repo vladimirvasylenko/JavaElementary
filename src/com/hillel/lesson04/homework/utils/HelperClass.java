@@ -15,7 +15,7 @@ public class HelperClass {
 
     public void sumChecker(Double sum) throws WrongSumException {
 
-        if (sum != 1000d) {
+        if (sum > 1000d) {
             throw new WrongSumException();
         }
     }

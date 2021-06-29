@@ -7,13 +7,6 @@ public class Client {
     private String accountId;
     private double sum;
 
-    public Client(String clientId, String surname, String accountId, double sum) {
-        this.clientId = clientId;
-        this.surname = surname;
-        this.accountId = accountId;
-        this.sum = sum;
-    }
-
     public String getClientId() {
         return clientId;
     }
