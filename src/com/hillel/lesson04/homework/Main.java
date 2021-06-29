@@ -10,7 +10,7 @@ import com.hillel.lesson04.homework.utils.HelperClass;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws WrongFieldException, UserExpectedError {
+    public static void main(String[] args) throws UserExpectedError {
 
         Scanner scanner = new Scanner(System.in);
         HelperClass helperClass = new HelperClass();
@@ -63,6 +63,7 @@ public class Main {
         }
 
         transactionService.moneySend(senderClient,receiverClientId);
+        System.out.println("Money already sent");
 
     }
 }
