@@ -20,7 +20,7 @@ public class HelperClass {
         }
     }
 
-    public void transactionUserChecker(String senderId, String receiverId) throws UserExpectedError {
+    public void transactionUserChecker(String senderId, String receiverId) {
 
         if (senderId.equals(receiverId)) {
             throw new UserExpectedError();
