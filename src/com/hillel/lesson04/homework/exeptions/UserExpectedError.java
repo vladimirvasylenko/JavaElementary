@@ -1,7 +1,7 @@
 package com.hillel.lesson04.homework.exeptions;
 
-public class UserExpectedError extends Exception {
+public class UserExpectedError extends RuntimeException {
     public UserExpectedError() {
-        super("UserExpectedError");
+        super("Sender and receiver account ID is same");
     }
 }

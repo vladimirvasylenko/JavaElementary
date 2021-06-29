@@ -10,7 +10,7 @@ import com.hillel.lesson04.homework.utils.HelperClass;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws UserExpectedError {
+    public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         HelperClass helperClass = new HelperClass();
