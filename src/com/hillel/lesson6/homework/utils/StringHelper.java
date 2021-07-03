@@ -8,6 +8,7 @@ public class StringHelper {
         if (charArray == null) {
             throw new NullPointerException();
         }
+
         String charArrayToString = String.valueOf(charArray);
 
         if (string.isBlank() || charArrayToString.isBlank()) {
@@ -21,15 +22,13 @@ public class StringHelper {
         String cutCarFromString;
 
         if (concatString.length() % 2 != 0) {
-            cutCarFromString = concatString.substring(0, concatString.length() / 2) + concatString.substring(concatString.length()/2+1);
-            System.out.println(cutCarFromString);
+            cutCarFromString = concatString.substring(0, concatString.length() / 2) + concatString.substring(concatString.length() / 2 + 1);
+            return cutCarFromString;
 
         } else {
-            cutCarFromString = concatString.substring(0, concatString.length() / 2 ) + concatString.substring(concatString.length()/2+2);
-            System.out.println(cutCarFromString);
+            cutCarFromString = concatString.substring(0, concatString.length() / 2 - 1) + concatString.substring(concatString.length() / 2 + 1);
+
         }
-
-
         return cutCarFromString;
     }
 }
